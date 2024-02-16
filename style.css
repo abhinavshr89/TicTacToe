@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.gameContainer {
+    display: flex;
+    margin: auto;
+    background: rgb(2,0,36);
+   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.container {
+
+    display: grid;
+    grid-template-columns: repeat(3, 7vw); /* Reduced the size from 10vw to 8vw */
+    grid-template-rows: repeat(3, 7vw); /* Reduced the size from 10vw to 8vw */
+    /* gap: 10px; Adjust the size of the gap according to your preference */
+    align-self: center;
+    position: relative;
+
+}
+
+
+.box {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 6vw; /* Adjusted font size to make boxes smaller */
+    cursor: pointer;
+    border: 5px solid #54a0ff;
+}
+
+.boxtext {
+    color: black; /* or the color you prefer */
+}
+
+.box:hover {
+    background-color:#ff0084;
+}
+
+.gameOverScreen {
+    width: 30vw;
+    margin-top: 2vh;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.turnShower{
+    width: 5vw;
+    height:5vw;
+   
+    margin-bottom: 40px;
+}
+.turnShowDisplay {
+    font-size: 4vw;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    color: lightseagreen;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.8); /* Adjust the color and size of the glow */
+}
+.turnShowerPara{
+    color: white;
+    text-align: center;
+    
+    width: auto;
+}
+.boxtext {
+   color: lightseagreen;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.8); /* Adjust the color and size of the glow */
+}
+.boxtext.x-color {
+    color: #3498db; /* Change the color for X to #3498db */
+    text-shadow: 0 0 3px #3498db, 0 0 6px #3498db, 0 0 9px #3498db; /* Adjust the blur radius */
+}
+
+.boxtext.o-color {
+    color: #8CFFD7;
+    text-shadow: 0 0 5px #8CFFD7, 0 0 10px #8CFFD7, 0 0 15px #8CFFD7;
+}
+
+.br-0{
+    border-right: 0px;
+}
+.bl-0{
+    border-left: 0px;
+}
+.bt-0{
+    border-top: 0px;
+}
+.bb-0{
+    border-bottom: 0px;
+}
+
+@media (max-width:950px) {
+    
+.container {
+
+    display: grid;
+    grid-template-columns: repeat(3, 20vw); /* Reduced the size from 10vw to 8vw */
+    grid-template-rows: repeat(3, 20vw); /* Reduced the size from 10vw to 8vw */
+    /* gap: 10px; Adjust the size of the gap according to your preference */
+    align-self: center;
+    position: relative;
+
+}
+.box{
+    font-size: 15vw;
+}
+.turnShower{
+    width: 20vw;
+    height:20vw;
+   
+    margin-bottom: 40px;
+}
+.turnShowDisplay {
+    font-size: 15vw;
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    color: lightseagreen;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.8); /* Adjust the color and size of the glow */
+}
+
+}
